@@ -23,17 +23,17 @@ Exception in thread "main" java.lang.NoClassDefFoundError: com/sun/tools/attach/
 
 
 ```text
-./jattach 1 load instrument false /tmp/javassist-agentshell-1.0.0.beat1.jar
+./jattach ${pid} load instrument false /tmp/javassist-agentshell-1.0.0.beat1.jar
 ```
 
 ![](./img/1706256591536.png)
 
 
+![](./img/1706256641611.png)
 
-### 测试效果
+---
 
-测试环境
-- docker-compose.yml
+docker-compose.yml
 
 ```yaml
 version: '3'
@@ -51,15 +51,10 @@ networks:
   apps:
     driver: "bridge"
 ```
-![](./img/1706256641611.png)
 
 
----
-
-参考
-```
 https://github.com/alibaba/arthas/issues/2049
-```
+
 
 
 
