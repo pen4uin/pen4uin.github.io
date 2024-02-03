@@ -1,155 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pen4uin's Notes</title>
     <style>
         body {
-            margin: 0 auto;
-            width: 64%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2em;
+            flex-grow: 1; /* 占据剩余的垂直空间 */
+            overflow-y: auto;
+        }
+
+        .about, .posts {
+            width: 100%;
+            max-width: 800px;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+        }
+
+        .posts {
+            order: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
         }
 
         a {
             text-decoration: none;
+            color: rgba(51, 51, 51, 0.81);
         }
 
         li {
-            margin-bottom: 12px; /* 调整这里的数值以控制间隔距离 */
+            margin-bottom: 12px;
         }
 
         span {
-            margin-right: 8px; /* 调整这里的数值以控制日期和文章标题之间的间隔 */
+            margin-right: 8px;
         }
     </style>
 </head>
-
 <body>
+
 <header>
-    <h2>pen4uin</h2>
+    <h1>pen4uin's Notes</h1>
 </header>
 
+<div class="container">
+    <div class="about">
+        <h2>About</h2>
+        <p>技术分享｜记录成长</p>
+        <nav style="display: flex; align-items: center; margin-top: 20px;">
+            <a href="https://github.com/pen4uin" target="_blank">
+                <img src="./assets/github.png" width="25px">
+            </a>
+        </nav>
+    </div>
 
-<ul>
-    <h3>about</h3>
-    技术分享｜记录成长
+    <div class="posts">
+        <h2>Posts</h2>
+        <h3>2024</h3>
+        <ul>
+            <li>
+                <span>2024-01-26</span>
+                <a href="/posts/2024-01-26_inject-agent-only-jre/" target="_blank">JRE 环境注入 Java Agent</a>
+            </li>
+        </ul>
+        <h3>2023</h3>
+        <ul>
+            <li>
+                <span>2023-12-31</span>
+                <a href="https://mp.weixin.qq.com/s/ECty7K7RZ08ihtI1vdJsQg" target="_blank">2023 年度总结</a>
+            </li>
+            <li>
+                <span>2023-12-09</span>
+                <a href="https://mp.weixin.qq.com/s/sDXvsmIH8fMsOsu8o_SxdQ" target="_blank">一次失败的 Fastjson 实战利用</a>
+            </li>
+            <li>
+                <span>2023-11-01</span>
+                <a href="/backup/confluence-CVE-2023-22518.pdf" target="_blank">Confluence CVE-2023-22518</a>
+            </li>
+            <li>
+                <span>2023-10-10</span>
+                <a href="https://mp.weixin.qq.com/s/rIfYrO1i4LPpgCGyxSLHUg" target="_blank">Confluence
+                    CVE-2023-22515</a>
+            </li>
+            <li>
+                <span>2023-09-28</span>
+                <a href="https://mp.weixin.qq.com/s/_TmPJnKtstL3KeysoyLcVA" target="_blank">jEG - 高度自定义的 Java 回显生成工具 (community)</a>
+            </li>
+            <li>
+                <span>2023-09-10</span>
+                <a href="/backup/snowflake-CVE-2023-30535-jdbc-attack.pdf" target="_blank">Snowflake CVE-2023-30535</a>
+            </li>
+            <li>
+                <span>2023-09-03</span>
+                <a href="https://mp.weixin.qq.com/s/0ZzH35aRUPelq8nwilMQiA" target="_blank">jMG v1.0.6</a>
+            </li>
+            <li>
+                <span>2023-07-08</span>
+                <a href="https://mp.weixin.qq.com/s/w9sMhMrCy1pofOV-h94qbQ" target="_blank">一次 Shiro 的实战利用</a>
 
-    <nav style="display: flex; align-items: center; margin-top: 20px;">
-        <a href="https://github.com/pen4uin" target="_blank">
-            <img src="./assets/github.png" width="25px">
-        </a>
-    </nav>
+            </li>
+            <li>
+                <span>2023-06-12</span>
+                <a href="/backup/tomcat-org_apache_catalina.pdf" target="_blank">Tomcat - 包名 org.apache.catalina 的坑</a>
+            </li>
+            <li>
+                <span>2023-06-10</span>
+                <a href="https://mp.weixin.qq.com/s/QjoRs_J5jVANrdEiiTtVtA" target="_blank">jMG v1.0.5</a>
+            </li>
+            <li>
+                <span>2023-06-04</span>
+                <a href="https://mp.weixin.qq.com/s/oAiGWY9ABhn2o148snA_sg" target="_blank">jMG - 高度自定义的 Java 内存马生成工具 (community)</a>
+            </li>
+            <li>
+                <span>2023-04-25</span>
+                <a href="https://mp.weixin.qq.com/s/vdb2zUbE4DxV-ua1xWm5cw" target="_blank">一次 H2 JDBC 的实战利用</a>
+            </li>
+            <li>
+                <span>2023-03-16</span>
+                <a href="/backup/dubbo-CVE-2023-23638.pdf" target="_blank">Dubbo CVE-2023-23638</a>
+            </li>
+            <li>
+                <span>2023-01-11</span>
+                <a href="/backup/vmware-vcenter-pre-auth-ssrf.pdf" target="_blank">VMware Vcenter pre-auth SSRF</a>
+            </li>
+        </ul>
+        <h3>2022</h3>
+        <ul>
+            <li>
+                <span>2022-12-31</span>
+                <a href="/posts/2022-12-31_2022-year-in-review/" target="_blank">2022 年度总结</a>
+            </li>
+            <li>
+                <span>2022-11-17</span>
+                <a href="/backup/yapi-nosql-injection-to-rce.pdf" target="_blank">YApi noSQL injection to RCE</a>
+            </li>
+            <li>
+                <span>2022-11-05</span>
+                <a href="/backup/tomcat-v5-different-classloading.pdf" target="_blank">Tomcat v5 不同的类加载机制</a>
+            </li>
+            <li>
+                <span>2022-10-26</span>
+                <a href="/backup/writeup-q3-rce2webshell-01.pdf" target="_blank">Q3 漏洞挖掘与利用专项培训-命令执行</a>
+                <a href="/backup/writeup-q3-rce2webshell-02.pdf" target="_blank">代码执行</a>
+            </li>
+            <li>
+                <span>2022-10-03</span>
+                <a href="/backup/confluence-CVE-2022-26134.pdf" target="_blank">Confluence CVE-2022-26134</a>
+            </li>
+            <li>
+                <span>2022-10-01</span>
+                <a href="/backup/confluence-CVE-2020-4027.pdf" target="_blank">Confluence CVE-2020-4027</a>
+            </li>
+            <li>
+                <span>2022-09-25</span>
+                <a href="/backup/for-shiro-550-find-gadgets-using-codeql.pdf" target="_blank">For Shiro-550, find gadgets using CodeQL</a>
+            </li>
+        </ul>
+        <h3>2021</h3>
+        <ul>
+            <li>
+                <span>2021-12-31</span>
+                <a href="/posts/2021-12-31_2021-year-in-review/" target="_blank">2021 年度总结</a>
+            </li>
+            <li>
+                <span>2021-05-26</span>
+                <a href="/backup/awesome-pentest-note.pdf" target="_blank">Github - pen4uin/awesome-pentest-note (end of 2022/04/12)</a>
+            </li>
+            <li>
+                <span>2021-00-00</span>
+                <a href="./deleted.html"><strike>已失效文章</strike></a>
+            </li>
+        </ul>
+    </div>
 
-    <hr>
+</div>
 
-    <h3>posts</h3>
+<footer>
+    &copy; 2020 ~ 2024 Exploit Once, Shell Anywhere.
+</footer>
 
-    <ul>
-        <li>
-            <span>2024-01-26</span>
-            <a href="/posts/2024-01-26_inject-agent-only-jre/" target="_blank">JRE 环境注入 Java Agent</a>
-        </li>
-        <li>
-            <span>2023-12-31</span>
-            <a href="https://mp.weixin.qq.com/s/ECty7K7RZ08ihtI1vdJsQg" target="_blank">2023 年度总结</a>
-        </li>
-        <li>
-            <span>2023-12-09</span>
-            <a href="https://mp.weixin.qq.com/s/sDXvsmIH8fMsOsu8o_SxdQ" target="_blank">一次失败的 Fastjson 实战利用</a>
-        </li>
-        <li>
-            <span>2023-11-01</span>
-            <a href="/backup/confluence-CVE-2023-22518.pdf" target="_blank">Confluence CVE-2023-22518</a>
-        </li>
-        <li>
-            <span>2023-10-10</span>
-            <a href="https://mp.weixin.qq.com/s/rIfYrO1i4LPpgCGyxSLHUg" target="_blank">Confluence CVE-2023-22515</a>
-        </li>
-        <li>
-            <span>2023-09-28</span>
-            <a href="https://mp.weixin.qq.com/s/_TmPJnKtstL3KeysoyLcVA" target="_blank">jEG - 高度自定义的 Java 回显生成工具
-                (community)</a>
-        </li>
-        <li>
-            <span>2023-09-10</span>
-            <a href="/backup/snowflake-CVE-2023-30535-jdbc-attack.pdf" target="_blank">Snowflake CVE-2023-30535</a>
-        </li>
-        <li>
-            <span>2023-09-03</span>
-            <a href="https://mp.weixin.qq.com/s/0ZzH35aRUPelq8nwilMQiA" target="_blank">jMG v1.0.6</a>
-        </li>
-        <li>
-            <span>2023-07-08</span>
-            <a href="https://mp.weixin.qq.com/s/w9sMhMrCy1pofOV-h94qbQ" target="_blank">一次 Shiro 的实战利用</a>
-
-        </li>
-        <li>
-            <span>2023-06-12</span>
-            <a href="/backup/tomcat-org_apache_catalina.pdf" target="_blank">Tomcat - 包名 org.apache.catalina 的坑</a>
-        </li>
-        <li>
-            <span>2023-06-10</span>
-            <a href="https://mp.weixin.qq.com/s/QjoRs_J5jVANrdEiiTtVtA" target="_blank">jMG v1.0.5</a>
-        </li>
-        <li>
-            <span>2023-06-04</span>
-            <a href="https://mp.weixin.qq.com/s/oAiGWY9ABhn2o148snA_sg" target="_blank">jMG - 高度自定义的 Java 内存马生成工具
-                (community)</a>
-        </li>
-        <li>
-            <span>2023-04-25</span>
-            <a href="https://mp.weixin.qq.com/s/vdb2zUbE4DxV-ua1xWm5cw" target="_blank">一次 H2 JDBC的实战利用</a>
-        </li>
-        <li>
-            <span>2023-03-16</span>
-            <a href="/backup/dubbo-CVE-2023-23638.pdf" target="_blank">Dubbo CVE-2023-23638</a>
-        </li>
-        <li>
-            <span>2023-01-11</span>
-            <a href="/backup/vmware-vcenter-pre-auth-ssrf.pdf" target="_blank">VMware Vcenter pre-auth SSRF</a>
-        </li>
-        <li>
-            <span>2022-12-31</span>
-            <a href="/posts/2022-12-31_2022-year-in-review/" target="_blank">2022 年度总结</a>
-        </li>
-        <li>
-            <span>2022-11-17</span>
-            <a href="/backup/yapi-nosql-injection-to-rce.pdf" target="_blank">YApi noSQL injection to RCE</a>
-        </li>
-        <li>
-            <span>2022-11-05</span>
-            <a href="/backup/tomcat-v5-different-classloading.pdf" target="_blank">Tomcat v5 不同的类加载机制</a>
-        </li>
-        <li>
-            <span>2022-10-26</span>
-            <a href="/backup/writeup-q3-rce2webshell-01.pdf" target="_blank">Q3 漏洞挖掘与利用专项培训-命令执行</a> <a href="/backup/writeup-q3-rce2webshell-02.pdf" target="_blank">代码执行</a>
-        </li>
-        <li>
-            <span>2022-10-03</span>
-            <a href="/backup/confluence-el-injection-via-ognl.pdf" target="_blank">Confluence EL Injection via OGNL</a>
-        </li>
-        <li>
-            <span>2022-10-01</span>
-            <a href="/backup/confluence-ssti-via-velocity.pdf" target="_blank">Confluence SSTI via Velocity</a>
-        </li>
-        <li>
-            <span>2022-09-25</span>
-            <a href="/backup/for-shiro-550-find-gadgets-using-codeql.pdf" target="_blank">For Shiro-550, find gadgets
-                using CodeQL</a>
-        </li>
-        <li>
-            <span>2021-12-31</span>
-            <a href="/posts/2021-12-31_2021-year-in-review/" target="_blank">2021 年度总结</a>
-        </li>
-        <li>
-            <span>2021-05-26</span>
-            <a href="/backup/awesome-pentest-note.pdf" target="_blank">Github - pen4uin/awesome-pentest-note (end of
-                2022/04/12)</a>
-        </li>
-        <li>
-            <span>2021-00-00</span>
-            <a href="./deleted.html"><strike>已失效文章</strike></a>
-        </li>
-    </ul>
-</ul>
 </body>
 </html>
