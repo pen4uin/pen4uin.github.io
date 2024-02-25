@@ -90,4 +90,8 @@ payload1:
 https://github.com/sethsec/PyCodeInjection
 https://sethsec.blogspot.com/2016/11/exploiting-python-code-injection-in-web.html
 
+---
+
+[LEAVE A REPLY](https://github.com/pen4uin/blog-feedback/issues/new)
+
 

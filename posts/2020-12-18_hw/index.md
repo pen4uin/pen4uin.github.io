@@ -72,6 +72,9 @@ burp:
 xray:
 ![](./img/1706966672196.png)
 
+---
+
+[LEAVE A REPLY](https://github.com/pen4uin/blog-feedback/issues/new)
 
 
 

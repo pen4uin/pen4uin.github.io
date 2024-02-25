@@ -43,3 +43,8 @@
 以后你有什么打算？
 
 好好工作，好好生活。
+
+---
+
+[LEAVE A REPLY](https://github.com/pen4uin/blog-feedback/issues/new)
+

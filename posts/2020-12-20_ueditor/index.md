@@ -71,3 +71,7 @@ http://1.1.1.1:8080/cmd/ueditor/jsp/controller.jsp?action=catchimage&source[]=ht
 希望自己在每一次的复盘中都能有所收获。
 在我看来，学习的目的并不是为了证明你学到了什么，而是在每一次的学习/工作中去发现自己还有哪些技能/知识没有掌握，然后去跟进学习。
 
+---
+
+[LEAVE A REPLY](https://github.com/pen4uin/blog-feedback/issues/new)
+
