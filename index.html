@@ -63,6 +63,17 @@
         span {
             margin-right: 8px;
         }
+
+        .posts {
+            order: 1;
+        }
+
+        .post-count {
+            text-align: right;
+            font-style: italic;
+            margin-bottom: 1em;
+        }
+
     </style>
 </head>
 <body>
@@ -83,7 +94,7 @@
     </div>
 
     <div class="posts">
-        <h2>Posts</h2>
+        <h2>Posts <span id="post-count"></span></h2>
         <h3>2024</h3>
         <ul>
             <li>
@@ -232,7 +243,7 @@
 
             <li>
                 <span>2020-07-13</span>
-                <a>故事的开始</a>
+                <a>安全之路的开始</a>
             </li>
 
         </ul>
@@ -244,5 +255,12 @@
     &copy; 2020 ~ 2024 Exploit Once, Shell Anywhere.
 </footer>
 
+<script>
+    // Count the number of posts and display it
+    document.addEventListener("DOMContentLoaded", function () {
+        var postCount = document.querySelectorAll('.posts ul li').length;
+        document.getElementById('post-count').textContent = "(" + postCount + ")";
+    });
+</script>
 </body>
 </html>
