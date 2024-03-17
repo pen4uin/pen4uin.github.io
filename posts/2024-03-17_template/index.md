@@ -21,6 +21,7 @@
     - [代码块](#代码块)
     - [关系图](#关系图)
         - [1. 时序图](#1-时序图)
+    - [HTML](#HTML)
 
 # 基本格式
 
@@ -137,6 +138,24 @@ graph TD;
     B-->D;
     C-->D;
 ```
+
+## HTML
+
+<table>
+    <tr>
+        <td><a href="">preview</a></td>
+        <td><a href="index.md">raw</a></td>
+    </tr>
+</table>
+
+
+<table>
+    <tr>
+        <td>Foo</td>
+        <td>Foo</td>
+    </tr>
+</table>
+
 
 [^1]: 这是一个脚注1的内容
 
