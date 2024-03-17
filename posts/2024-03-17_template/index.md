@@ -1,5 +1,10 @@
-| [preview](./index) | [raw](./index.md) |
-|:-------------------|------------------:|
+
+<table>
+    <tr>
+        <td><a href="">preview</a></td>
+        <td><a href="index.md">raw</a></td>
+    </tr>
+</table>
 
 ---
 
@@ -102,16 +107,17 @@
 <details>
 <summary>Tips for collapsed sections</summary>
 
-
+<p>
 You can add text within a collapsed section.
 
 You can add an image or a code block, too.
+</p>
 
-```ruby
+<pre>
 
    puts "Hello World"
-   
-```
+
+</pre>
 
 </details>
 
@@ -140,13 +146,6 @@ graph TD;
 ```
 
 ## HTML
-
-<table>
-    <tr>
-        <td><a href="">preview</a></td>
-        <td><a href="index.md">raw</a></td>
-    </tr>
-</table>
 
 
 <table>
